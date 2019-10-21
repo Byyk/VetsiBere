@@ -14,27 +14,22 @@ namespace VetsiBere.Model
         private readonly Balicek _balicek;
         private readonly List<Hrac> _hraci;
 
+        public Hrac[] Hraci => _hraci.ToArray();
+        public void SetHraci(Hrac[] h) {
+            _hraci.Clear();
+            _hraci.AddRange(h);
+        }
+
         private GameManager()
         {
             _balicek = new Balicek();
-
-            for (int i = 0; i < 4; i++)
-                for (int j = 0; j < 8; j++)
-                    _balicek.Add(new Karta(i,j));
-            _balicek.Shufle();
+            _hraci = new List<Hrac>();
         }
 
-        public void Write()
-        {
-            foreach (var karta in _balicek)
-            {
-                Console.WriteLine(karta.Barva + " : " + karta.TypKarty);
-            }
-        }
-
-        public void AddHrac(string nazev, Color barva)
+        public Hrac AddHrac(string nazev, Color barva)
         {
             _hraci.Add(new Hrac(nazev, barva));
+            return _hraci.Last();
         }
 
         public void RemoveHrac(Hrac hrac)
@@ -45,6 +40,32 @@ namespace VetsiBere.Model
         public void GivePlayerCard(Hrac hrac)
         {
             hrac.GetCard(_balicek.TakeCard());
+        }
+
+        public void Rozdej()
+        {
+            Refresh();
+            while (_balicek.Count >= _hraci.Count)
+            {
+                foreach (Hrac hrac in _hraci)
+                {
+                    hrac.GetCard(_balicek.TakeCard());
+                }
+            }
+        }
+
+        private void Refresh()
+        {
+            _balicek.Clear();
+            for (int i = 0; i < 4; i++)
+            for (int j = 0; j < 8; j++)
+                _balicek.Add(new Karta(i, j));
+            _balicek.Shufle();
+
+            foreach (Hrac hrac in _hraci)
+            {
+                hrac.SpalKarty();
+            }
         }
     }
 }

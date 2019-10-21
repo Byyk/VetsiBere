@@ -8,6 +8,7 @@ namespace VetsiBere.Model
 {
     public class Karta
     {
+        public Karta() { }
         public Karta(int barva, int typKarty)
         {
             Barva = (Barva) barva;

@@ -34,13 +34,14 @@
             // 
             // myPictureBox1
             // 
-            this.myPictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.myPictureBox1.BackColor = System.Drawing.Color.Bisque;
             this.myPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.myPictureBox1.Name = "myPictureBox1";
             this.myPictureBox1.Size = new System.Drawing.Size(800, 450);
             this.myPictureBox1.TabIndex = 0;
             this.myPictureBox1.TabStop = false;
+            this.myPictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.MyPictureBox1_Paint);
             // 
             // Hra
             // 
@@ -50,6 +51,9 @@
             this.Controls.Add(this.myPictureBox1);
             this.Name = "Hra";
             this.Text = "Hra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hra_FormClosing);
+            this.Load += new System.EventHandler(this.Hra_Load);
+            this.Shown += new System.EventHandler(this.Hra_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.myPictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -58,13 +58,28 @@
     <Compile Include="Hra.Designer.cs">
       <DependentUpon>Hra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Components\Player.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Components\Player.Designer.cs">
+      <DependentUpon>Player.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\GameManager.cs" />
     <Compile Include="Model\Hrac.cs" />
+    <Compile Include="Model\HracXml.cs" />
     <Compile Include="Model\Karta.cs" />
+    <Compile Include="Model\NastaveniXml.cs" />
     <Compile Include="Model\Overwrites\Balicek.cs" />
     <Compile Include="Model\Overwrites\MyPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\Popups\Nastaveni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Popups\Nastaveni.Designer.cs">
+      <DependentUpon>Nastaveni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Static\ColorGen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -72,6 +87,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hra.resx">
       <DependentUpon>Hra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Components\Player.resx">
+      <DependentUpon>Player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Popups\Nastaveni.resx">
+      <DependentUpon>Nastaveni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,6 +116,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-bin-49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-bin-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-bin-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karta.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_sedma.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

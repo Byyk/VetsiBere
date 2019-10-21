@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VetsiBere.Model;
 
 namespace VetsiBere
 {
@@ -15,6 +16,7 @@ namespace VetsiBere
         public Form1()
         {
             InitializeComponent();
+            GameManager.Insatance.Write();
         }
     }
 }

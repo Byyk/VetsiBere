@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VetsiBere
 {
-    public partial class HraciPole : Form
+    public partial class Hra : Form
     {
-        public HraciPole()
+        public Hra()
         {
             InitializeComponent();
         }

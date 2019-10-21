@@ -63,6 +63,16 @@ namespace VetsiBere.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c_desitka {
+            get {
+                object obj = ResourceManager.GetObject("c_desitka", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_bin_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-bin-40", resourceCulture);

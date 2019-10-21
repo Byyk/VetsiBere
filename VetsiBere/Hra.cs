@@ -122,7 +122,7 @@ namespace VetsiBere
 
             #endregion
 
-            g.DrawImage(Resources.z_sedma, new Point(300, 200));
+            g.DrawImage(Resources.c_desitka, new Point(300, 200));
         }
     }
 }

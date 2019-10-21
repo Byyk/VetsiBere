@@ -9,6 +9,9 @@ namespace VetsiBere.Model.Overwrites
 {
     public class MyPictureBox : PictureBox
     {
-
+        public MyPictureBox() : base()
+        {
+            DoubleBuffered = true;
+        }
     }
 }

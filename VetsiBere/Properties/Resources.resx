@@ -118,13 +118,106 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="c_desitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\c_desitka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\c_desitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c_devitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c_devitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c_eso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c_eso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c_kral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c_kral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c_osma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c_osma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c_sedma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c_sedma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c_spodek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c_spodek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c_svrsek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c_svrsek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_desitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_desitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_devitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_devitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_eso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_eso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_kral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_kral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_osma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_osma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_sedma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_sedma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_spodek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_spodek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_svrsek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e_svrsek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-delete-bin-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-delete-bin-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="k_desitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_desitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_devitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_devitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_eso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_eso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_kral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_kral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_osma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_osma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_sedma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_sedma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_spodek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_spodek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_svrsek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_svrsek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="z_desitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z_desitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="z_devitka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z_devitka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="z_eso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z_eso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="z_kral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z_kral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="z_osma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z_osma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="z_sedma" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\z_sedma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\z_sedma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="z_spodek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z_spodek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="z_svrsek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z_svrsek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

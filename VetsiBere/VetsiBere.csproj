@@ -70,6 +70,7 @@
     <Compile Include="Model\Karta.cs" />
     <Compile Include="Model\NastaveniXml.cs" />
     <Compile Include="Model\Overwrites\Balicek.cs" />
+    <Compile Include="Model\Overwrites\Bitmap.cs" />
     <Compile Include="Model\Overwrites\MyPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -118,22 +119,106 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-delete-bin-49.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-delete-bin-30.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-delete-bin-40.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Karta.bmp" />
+    <None Include="Resources\z_kral.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\z_sedma.jpg" />
+    <None Include="Resources\z_eso.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\c_desitka.jpg" />
+    <None Include="Resources\z_devitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_desitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_svrsek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_spodek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_sedma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_osma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_kral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_eso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_devitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_desitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_svrsek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_spodek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_sedma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_osma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_kral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_eso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_devitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_desitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_svrsek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_spodek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_sedma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_osma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_kral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_eso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_devitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_desitka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_svrsek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_spodek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_sedma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_osma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

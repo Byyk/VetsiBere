@@ -4,6 +4,7 @@ using System.Drawing.Drawing2D;
 using System.Threading;
 using System.Windows.Forms;
 using VetsiBere.Model;
+using VetsiBere.Model.Overwrites;
 using VetsiBere.Properties;
 
 namespace VetsiBere
@@ -122,7 +123,8 @@ namespace VetsiBere
 
             #endregion
 
-            g.DrawImage(Resources.c_desitka, new Point(300, 200));
+            g.DrawImage(Resources.back.Resize(450,750), new Point(300, 200));
+            g.DrawImage(Resources.z_sedma.Resize(150,250), new Point(300, 200));
         }
     }
 }

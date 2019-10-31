@@ -122,6 +122,9 @@ namespace VetsiBere
                 vyhozene.Add(k);
                 if ((int) vyherce.PosledniZahranaKarta.TypKarty < (int) k.TypKarty)
                     vyherce = hrac;
+                HracInterface inter = new HracInterface();
+                inter.prohral();
+                inter.vyhral(vyherce);
             }
             vyherce.GetCards(vyhozene);
         }

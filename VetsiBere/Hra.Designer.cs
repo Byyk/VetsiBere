@@ -30,8 +30,6 @@
         {
       this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
       this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-      this.hracInterface1 = new VetsiBere.Model.Components.HracInterface();
-      this.flowLayoutPanel2.SuspendLayout();
       this.SuspendLayout();
       // 
       // flowLayoutPanel1
@@ -43,20 +41,11 @@
       // 
       // flowLayoutPanel2
       // 
-      this.flowLayoutPanel2.Controls.Add(this.hracInterface1);
       this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 288);
       this.flowLayoutPanel2.Name = "flowLayoutPanel2";
       this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(3);
       this.flowLayoutPanel2.Size = new System.Drawing.Size(776, 150);
       this.flowLayoutPanel2.TabIndex = 1;
-      // 
-      // hracInterface1
-      // 
-      this.hracInterface1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-      this.hracInterface1.Location = new System.Drawing.Point(6, 6);
-      this.hracInterface1.Name = "hracInterface1";
-      this.hracInterface1.Size = new System.Drawing.Size(150, 138);
-      this.hracInterface1.TabIndex = 0;
       // 
       // Hra
       // 
@@ -72,7 +61,6 @@
       this.Load += new System.EventHandler(this.Hra_Load);
       this.Shown += new System.EventHandler(this.Hra_Shown);
       this.Click += new System.EventHandler(this.Hra_Click);
-      this.flowLayoutPanel2.ResumeLayout(false);
       this.ResumeLayout(false);
 
         }
@@ -81,6 +69,5 @@
 
     private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-    private Model.Components.HracInterface hracInterface1;
   }
 }

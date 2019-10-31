@@ -105,7 +105,7 @@ namespace VetsiBere
             flowLayoutPanel1.Controls.Clear();
             foreach (Hrac hrac in GameManager.Insatance.Hraci)
             {
-                flowLayoutPanel1.Controls.Add(new HracInterface(hrac));
+                flowLayoutPanel2.Controls.Add(new HracInterface(hrac));
             }
         }
 

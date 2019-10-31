@@ -25,7 +25,6 @@ namespace VetsiBere.Model
         }
 
         public int PoradoveCislo { get; set; }
-        public Rectangle TablePart { get; set; }
 
         private Color barva;
         public Color Barva
@@ -58,9 +57,10 @@ namespace VetsiBere.Model
             CardCountChanged?.Invoke(Ruka.Count);
         }
 
-        public void GetCards()
+        public void GetCards(List<Karta> k)
         {
-
+            Ruka.AddRange(k);
+            CardCountChanged?.Invoke(Ruka.Count);
         }
 
         public Karta ThrowCard()

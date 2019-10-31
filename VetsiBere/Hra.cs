@@ -123,7 +123,7 @@ namespace VetsiBere
                 if ((int) vyherce.PosledniZahranaKarta.TypKarty < (int) k.TypKarty)
                     vyherce = hrac;
             }
-
+            vyherce.GetCards(vyhozene);
         }
     }
 }

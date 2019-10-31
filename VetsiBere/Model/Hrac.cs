@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VetsiBere.Model.Overwrites;
+using VetsiBere.Model.Static;
 
 namespace VetsiBere.Model
 {
@@ -12,6 +13,9 @@ namespace VetsiBere.Model
     {
         public event Action<string> NameChanged;
         public event Action<Color> ColorChanged;
+        public event Action<int> CardCountChanged;
+
+        public Karta PosledniZahranaKarta;
 
         public Hrac(string nazev, Color barva)
         {
@@ -21,6 +25,7 @@ namespace VetsiBere.Model
         }
 
         public int PoradoveCislo { get; set; }
+        public Rectangle TablePart { get; set; }
 
         private Color barva;
         public Color Barva
@@ -50,10 +55,19 @@ namespace VetsiBere.Model
         public void GetCard(Karta karta)
         {
             Ruka.Add(karta);
+            CardCountChanged?.Invoke(Ruka.Count);
         }
+
+        public void GetCards()
+        {
+
+        }
+
         public Karta ThrowCard()
         {
-            return Ruka.TakeCard();
+            CardCountChanged?.Invoke(Ruka.Count - 1);
+            PosledniZahranaKarta = Ruka.TakeCard();
+            return PosledniZahranaKarta;
         }
 
         public void SpalKarty()

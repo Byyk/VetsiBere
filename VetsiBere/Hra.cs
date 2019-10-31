@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Threading;
 using System.Windows.Forms;
 using VetsiBere.Model;
+using VetsiBere.Model.Components;
 using VetsiBere.Model.Overwrites;
+using VetsiBere.Model.Static;
 using VetsiBere.Properties;
 
 namespace VetsiBere
@@ -15,8 +18,6 @@ namespace VetsiBere
 
         private readonly Brush _tableBrush;
         private readonly Pen _tablePen;
-        private bool appRunning;
-        private Thread graficThread, updateThread;
 
         public Hra()
         {
@@ -26,35 +27,10 @@ namespace VetsiBere
             _tableBorder = 50f;
         }
 
-        private float PBWidth => myPictureBox1.Width;
-        private float PBHeight => myPictureBox1.Height;
-
-        private void UpdateGraphicsGameLoop()
-        {
-            while (appRunning)
-            {
-                UpdatePB(myPictureBox1);
-                Thread.Sleep(50);
-            }
-        }
 
         private void Hra_Load(object sender, EventArgs e)
         {
-            (updateThread = new Thread(UpdateGameLoop)).Start();
-            (graficThread = new Thread(UpdateGraphicsGameLoop)).Start();
-        }
 
-        private void UpdateGameLoop()
-        {
-            while (appRunning) Thread.Sleep(25);
-        }
-
-        private void UpdatePB(PictureBox p)
-        {
-            if (InvokeRequired)
-                Invoke(new MethodInvoker(() => p.Refresh()));
-            else
-                p.Refresh();
         }
 
         private void Hra_FormClosing(object sender, FormClosingEventArgs e)
@@ -63,14 +39,7 @@ namespace VetsiBere
             {
                 e.Cancel = true;
                 Hide();
-                appRunning = false;
             }
-        }
-
-        private void Hra_Shown(object sender, EventArgs e)
-        {
-            appRunning = true;
-            GameManager.Insatance.Rozdej();
         }
 
         private void MyPictureBox1_Paint(object sender, PaintEventArgs e)
@@ -110,7 +79,7 @@ namespace VetsiBere
             #endregion
             #region DrawTable2D
 
-            g.FillRectangle(_tableBrush,
+            /*g.FillRectangle(_tableBrush,
                 _tableBorder,
                 _tableBorder,
                 PBWidth - 2 * _tableBorder,
@@ -121,10 +90,40 @@ namespace VetsiBere
                 PBWidth - 2 * _tableBorder,
                 PBHeight - 2 * _tableBorder);
 
+            */
+
             #endregion
 
-            g.DrawImage(Resources.back.Resize(450,750), new Point(300, 200));
-            g.DrawImage(Resources.z_sedma.Resize(150,250), new Point(300, 200));
+            new Karta(3, 2).DrawYourSelf(g, 100, 100);
+
+            g.DrawImage(Resources.c_kral.Resize(150,250), new Point(300, 200));
+            //g.DrawImage(Resources.z_sedma.Resize(150,250), new Point(300, 200));
+        }
+
+        private void Hra_Shown(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            foreach (Hrac hrac in GameManager.Insatance.Hraci)
+            {
+                flowLayoutPanel1.Controls.Add(new HracInterface(hrac));
+            }
+        }
+
+        private void Hra_Click(object sender, EventArgs e)
+        {
+            var hraci = GameManager.Insatance.Hraci;
+            var vyhozene = new List<Karta>();
+            Hrac vyherce = hraci[0];
+
+            Karta k;
+            foreach (Hrac hrac in hraci)
+            {
+                k = hrac.ThrowCard();
+                vyhozene.Add(k);
+                if ((int) vyherce.PosledniZahranaKarta.TypKarty < (int) k.TypKarty)
+                    vyherce = hrac;
+            }
+
         }
     }
 }

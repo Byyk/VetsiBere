@@ -30,6 +30,7 @@ namespace VetsiBere
 
         private void Button5_Click(object sender, EventArgs e)
         {
+            GameManager.Insatance.ZacniHru();
             _hra.Show();
             Hide();
         }

@@ -28,39 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.myPictureBox1 = new VetsiBere.Model.Overwrites.MyPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.myPictureBox1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // myPictureBox1
-            // 
-            this.myPictureBox1.BackColor = System.Drawing.Color.Bisque;
-            this.myPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.myPictureBox1.Name = "myPictureBox1";
-            this.myPictureBox1.Size = new System.Drawing.Size(800, 450);
-            this.myPictureBox1.TabIndex = 0;
-            this.myPictureBox1.TabStop = false;
-            this.myPictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.MyPictureBox1_Paint);
-            // 
-            // Hra
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.myPictureBox1);
-            this.Name = "Hra";
-            this.Text = "Hra";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hra_FormClosing);
-            this.Load += new System.EventHandler(this.Hra_Load);
-            this.Shown += new System.EventHandler(this.Hra_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.myPictureBox1)).EndInit();
-            this.ResumeLayout(false);
+      this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+      this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+      this.hracInterface1 = new VetsiBere.Model.Components.HracInterface();
+      this.flowLayoutPanel2.SuspendLayout();
+      this.SuspendLayout();
+      // 
+      // flowLayoutPanel1
+      // 
+      this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+      this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+      this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 270);
+      this.flowLayoutPanel1.TabIndex = 0;
+      // 
+      // flowLayoutPanel2
+      // 
+      this.flowLayoutPanel2.Controls.Add(this.hracInterface1);
+      this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 288);
+      this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+      this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(3);
+      this.flowLayoutPanel2.Size = new System.Drawing.Size(776, 150);
+      this.flowLayoutPanel2.TabIndex = 1;
+      // 
+      // hracInterface1
+      // 
+      this.hracInterface1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+      this.hracInterface1.Location = new System.Drawing.Point(6, 6);
+      this.hracInterface1.Name = "hracInterface1";
+      this.hracInterface1.Size = new System.Drawing.Size(150, 138);
+      this.hracInterface1.TabIndex = 0;
+      // 
+      // Hra
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BackColor = System.Drawing.Color.Bisque;
+      this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.flowLayoutPanel2);
+      this.Controls.Add(this.flowLayoutPanel1);
+      this.Name = "Hra";
+      this.Text = "Hra";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hra_FormClosing);
+      this.Load += new System.EventHandler(this.Hra_Load);
+      this.Shown += new System.EventHandler(this.Hra_Shown);
+      this.Click += new System.EventHandler(this.Hra_Click);
+      this.flowLayoutPanel2.ResumeLayout(false);
+      this.ResumeLayout(false);
 
         }
 
-        #endregion
+    #endregion
 
-        private Model.Overwrites.MyPictureBox myPictureBox1;
-    }
+    private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+    private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+    private Model.Components.HracInterface hracInterface1;
+  }
 }

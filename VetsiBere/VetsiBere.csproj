@@ -58,6 +58,12 @@
     <Compile Include="Hra.Designer.cs">
       <DependentUpon>Hra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Components\HracInterface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Components\HracInterface.Designer.cs">
+      <DependentUpon>HracInterface.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Components\Player.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hra.resx">
       <DependentUpon>Hra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Components\HracInterface.resx">
+      <DependentUpon>HracInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\Components\Player.resx">
       <DependentUpon>Player.cs</DependentUpon>

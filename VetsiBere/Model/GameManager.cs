@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VetsiBere.Model.Overwrites;
+using VetsiBere.Model.Static;
 
 namespace VetsiBere.Model
 {
@@ -15,6 +16,8 @@ namespace VetsiBere.Model
         private readonly List<Hrac> _hraci;
 
         public Hrac[] Hraci => _hraci.ToArray();
+        public int PocetHracu => _hraci.Count;
+
         public void SetHraci(Hrac[] h) {
             _hraci.Clear();
             _hraci.AddRange(h);
@@ -42,7 +45,12 @@ namespace VetsiBere.Model
             hrac.GetCard(_balicek.TakeCard());
         }
 
-        public void Rozdej()
+        public void ZacniHru()
+        {
+            Rozdej();
+        }
+
+        private void Rozdej()
         {
             Refresh();
             while (_balicek.Count >= _hraci.Count)
@@ -53,6 +61,7 @@ namespace VetsiBere.Model
                 }
             }
         }
+
 
         private void Refresh()
         {

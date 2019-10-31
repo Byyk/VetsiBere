@@ -18,6 +18,9 @@ namespace VetsiBere.Model.Components
         {
             InitializeComponent();
             _hrac = hrac;
+            label1.Text = hrac.Nazev;
+            label2.Text = hrac.PocetKaret.ToString();
+            this.BackColor = hrac.Barva;
         }
 
         public HracInterface() { }

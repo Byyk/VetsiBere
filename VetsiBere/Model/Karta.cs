@@ -19,12 +19,7 @@ namespace VetsiBere.Model
         }
         public Barva Barva { get; set; }
         public TypyKaret TypKarty { get; set; }
-
-        public void DrawYourSelf(Graphics g, int x, int y)
-        {
-            var a = CardImages.cards[new DKey(Barva, TypKarty)];
-            g.DrawImage(a , new Point(x,y));
-        }
+        public Bitmap GetImage => CardImages.cards[new DKey(Barva, TypKarty)];
     }
 
     public enum Barva

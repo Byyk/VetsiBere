@@ -58,6 +58,12 @@
     <Compile Include="Hra.Designer.cs">
       <DependentUpon>Hra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Components\HraciKarta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Components\HraciKarta.Designer.cs">
+      <DependentUpon>HraciKarta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Components\HracInterface.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +83,7 @@
     <Compile Include="Model\NastaveniXml.cs" />
     <Compile Include="Model\Overwrites\Balicek.cs" />
     <Compile Include="Model\Overwrites\Bitmap.cs" />
+    <Compile Include="Model\Overwrites\ColorExt.cs" />
     <Compile Include="Model\Overwrites\MyPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -87,6 +94,7 @@
       <DependentUpon>Nastaveni.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Static\ColorGen.cs" />
+    <Compile Include="Model\VyhozenaKarta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -94,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hra.resx">
       <DependentUpon>Hra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Components\HraciKarta.resx">
+      <DependentUpon>HraciKarta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\Components\HracInterface.resx">
       <DependentUpon>HracInterface.cs</DependentUpon>

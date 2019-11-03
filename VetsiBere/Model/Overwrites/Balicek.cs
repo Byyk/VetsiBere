@@ -29,6 +29,7 @@ namespace VetsiBere.Model.Overwrites
 
         public Karta TakeCard()
         {
+          if (Count == 0) return null;
             var first = this[0];
             this.RemoveAt(0);
             return first;

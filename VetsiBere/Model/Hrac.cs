@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using VetsiBere.Model.Overwrites;
 using VetsiBere.Model.Static;
 
@@ -24,7 +25,7 @@ namespace VetsiBere.Model
             Barva = barva;
         }
 
-        public int PoradoveCislo { get; set; }
+        public int Poradi { get; set; }
 
         private Color barva;
         public Color Barva
@@ -48,6 +49,8 @@ namespace VetsiBere.Model
             }
         }
 
+        public bool VeHre = true;
+
         public Balicek Ruka { get; set; }
 
         public int PocetKaret => Ruka.Count;
@@ -57,22 +60,34 @@ namespace VetsiBere.Model
             CardCountChanged?.Invoke(Ruka.Count);
         }
 
-        public void GetCards(List<Karta> k)
+        public void GetCards(List<VyhozenaKarta> k)
         {
-            Ruka.AddRange(k);
+            Ruka.AddRange(k.Select(ka => ka.Karta));
             CardCountChanged?.Invoke(Ruka.Count);
         }
 
-        public Karta ThrowCard()
+        public VyhozenaKarta ThrowCard()
         {
-            CardCountChanged?.Invoke(Ruka.Count - 1);
             PosledniZahranaKarta = Ruka.TakeCard();
-            return PosledniZahranaKarta;
+            CardCountChanged?.Invoke(Ruka.Count);
+            if (PosledniZahranaKarta == null)
+            {
+              VeHre = false;
+              return null;
+            }
+            return new VyhozenaKarta(this, PosledniZahranaKarta);
         }
 
         public void SpalKarty()
         {
             Ruka.Clear();
+        }
+
+        public void Prohraj(int poradi)
+        {
+          VeHre = false;
+          Poradi = poradi;
+          MessageBox.Show(poradi.ToString());
         }
     }
 }

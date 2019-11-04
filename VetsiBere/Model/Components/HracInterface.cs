@@ -25,7 +25,7 @@ namespace VetsiBere.Model.Components
             label2.Text = hrac.PocetKaret.ToString();
             lastCardCount = hrac.PocetKaret;
             this.BackColor = hrac.Barva;
-            
+            DoubleBuffered = true;
         }
 
         public HracInterface() { }

@@ -45,5 +45,11 @@ namespace VetsiBere
             _nastaveni.Show();
             Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("V nastavení vytvoř hráče pro dannou hru a poté spusť hru. Ve hře jsou 2 tlačítka. " +
+                "První hru stopne a druhé hru spustí.");
+        }
     }
 }

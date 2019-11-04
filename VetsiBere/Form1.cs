@@ -45,5 +45,11 @@ namespace VetsiBere
             _nastaveni.Show();
             Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Pomoc pom = new Pomoc();
+            pom.Show();
+        }
     }
 }

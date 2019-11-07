@@ -15,6 +15,7 @@ namespace VetsiBere.Model
         public event Action<string> NameChanged;
         public event Action<Color> ColorChanged;
         public event Action<int> CardCountChanged;
+        public event Action Prohral;
 
         public Karta PosledniZahranaKarta;
 
@@ -87,6 +88,7 @@ namespace VetsiBere.Model
         {
           VeHre = false;
           Poradi = poradi;
+          Prohral?.Invoke();
         }
     }
 }

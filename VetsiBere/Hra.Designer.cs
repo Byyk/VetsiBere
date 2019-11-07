@@ -35,6 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button3 = new System.Windows.Forms.Button();
+            this.consoleControl1 = new VetsiBere.Model.Components.ConsoleControl();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,23 +98,50 @@
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.trackBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.trackBar1.Size = new System.Drawing.Size(45, 344);
+            this.trackBar1.Size = new System.Drawing.Size(45, 288);
             this.trackBar1.TabIndex = 0;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trackBar1.Value = 19;
+            this.trackBar1.Value = 15;
             this.trackBar1.ValueChanged += new System.EventHandler(this.TrackBar1_ValueChanged);
+            this.trackBar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trackBar1_MouseDown);
+            this.trackBar1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trackBar1_MouseUp);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Beige;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.PeachPuff;
+            this.button3.Image = global::VetsiBere.Properties.Resources.icons8_console_32;
+            this.button3.Location = new System.Drawing.Point(794, 418);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 4;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // consoleControl1
+            // 
+            this.consoleControl1.BackColor = System.Drawing.Color.Bisque;
+            this.consoleControl1.Location = new System.Drawing.Point(850, 12);
+            this.consoleControl1.Name = "consoleControl1";
+            this.consoleControl1.Size = new System.Drawing.Size(289, 456);
+            this.consoleControl1.TabIndex = 5;
             // 
             // Hra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(854, 480);
+            this.ClientSize = new System.Drawing.Size(852, 480);
+            this.Controls.Add(this.consoleControl1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Hra";
             this.Text = "Hra";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hra_FormClosing);
@@ -133,5 +162,7 @@
     private System.Windows.Forms.Button button2;
     private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button button3;
+        private Model.Components.ConsoleControl consoleControl1;
     }
 }

@@ -11,6 +11,8 @@ namespace VetsiBere.Model
 {
     public class GameManager
     {
+        public event Action HraZacala;
+
         public static GameManager Insatance = new GameManager();
         private readonly Balicek _balicek;
         private readonly List<Hrac> _hraci;
@@ -27,6 +29,38 @@ namespace VetsiBere.Model
         {
             _balicek = new Balicek();
             _hraci = new List<Hrac>();
+
+            Components.Console.commandEntered += (s, strings) =>
+            {
+                Hrac hrac;
+                switch (s)
+                {
+                    case "kill":
+                        hrac = Hraci.FirstOrDefault(h => h.Nazev == strings[0]);
+                        if (hrac != null) hrac.Prohraj(Hraci.Count(h => h.VeHre));
+                        else Components.Console.LogToConsole("Neplatný název hráče");
+                        break;
+                    case "make-god":
+                        hrac = Hraci.FirstOrDefault(h => h.Nazev == strings[0]);
+                        foreach (Karta karta in hrac.Ruka)
+                        {
+                            karta.TypKarty = TypyKaret.GodCard;
+                        }
+                        break;
+                    case "give-card":
+                        int typ, barva = 0;
+                        if(strings.Length < 2) Components.Console.LogToConsole("give-card musí mít alespoň 2 argumenty. (název hráče a typ karty)");
+                        if (strings.Length == 2) barva = 0;
+                        if (strings.Length == 3)
+                            if(!int.TryParse(strings[2], out barva)) Components.Console.LogToConsole("2. argument musí být čislo");
+                        if (!int.TryParse(strings[1], out typ)) Components.Console.LogToConsole("1. argument musí být čislo");
+
+                        hrac = Hraci.FirstOrDefault(f => f.Nazev == strings[0]);
+                        if(hrac == null) Components.Console.LogToConsole("Hráč: " + strings[0] + " neexistuje!");
+                        hrac.GetCard(new Karta(barva, typ));
+                        break;
+                }
+            };
         }
 
         public Hrac AddHrac(string nazev, Color barva)
@@ -52,6 +86,7 @@ namespace VetsiBere.Model
             {
                 hrac.VeHre = true;
             }
+            HraZacala?.Invoke();
         }
 
         private void Rozdej()

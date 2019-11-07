@@ -17,6 +17,8 @@ namespace VetsiBere.Model.Components
         private readonly Hrac _hrac;
 
         private int lastCardCount;
+        private int posledniPocet;
+
         public HracInterface(Hrac hrac)
         {
             InitializeComponent();
@@ -32,15 +34,21 @@ namespace VetsiBere.Model.Components
 
         private void HracInterface_Load(object sender, EventArgs e)
         {
+            _hrac.Prohral += () => label3.Text = ":(";
             _hrac.ColorChanged += (Color b) => BackColor = b;
             _hrac.NameChanged += (string j) => label1.Text = j;
             _hrac.CardCountChanged += (int p) =>
             {
               label2.Text = p.ToString();
-              var change = (p - lastCardCount);
-              label3.Text = change < 0 ? "- " + Math.Abs(change) : "+ " + change;
+              posledniPocet += (p - lastCardCount);
+              if (posledniPocet < 0) label3.Text = "- " + Math.Abs(posledniPocet);
+              else if (posledniPocet == 0) label3.Text = 0.ToString();
+              else label3.Text = "+ " + posledniPocet;
               lastCardCount = p;
             };
+
+            Hra.KonecKola += () => posledniPocet = 0;
+            GameManager.Insatance.HraZacala += () => label3.Text = 0.ToString();
         }
 
     private void HracInterface_Paint(object sender, PaintEventArgs e)

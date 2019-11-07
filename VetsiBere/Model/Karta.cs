@@ -39,7 +39,8 @@ namespace VetsiBere.Model
         Osmicka = 4,
         Devitka = 5,
         Desitka = 6,
-        Eso = 7
+        Eso = 7,
+        GodCard = 8
     }
 
     public class DKey : IEquatable<DKey>

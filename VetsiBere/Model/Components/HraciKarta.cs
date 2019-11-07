@@ -18,7 +18,8 @@ namespace VetsiBere.Model.Components
     {
       InitializeComponent();
       _karta = karta;
-      BackgroundImage = _karta.GetImage.Resize(Width, Height);
+      if(_karta.TypKarty != TypyKaret.GodCard)
+        BackgroundImage = _karta.GetImage.Resize(Width, Height);
     }
   }
 }

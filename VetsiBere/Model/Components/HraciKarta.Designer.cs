@@ -28,15 +28,17 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.SuspendLayout();
-      // 
-      // HraciKarta
-      // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.Name = "HraciKarta";
-      this.Size = new System.Drawing.Size(155, 258);
-      this.ResumeLayout(false);
+            this.SuspendLayout();
+            // 
+            // HraciKarta
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Enabled = false;
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Name = "HraciKarta";
+            this.Size = new System.Drawing.Size(155, 258);
+            this.ResumeLayout(false);
 
     }
 

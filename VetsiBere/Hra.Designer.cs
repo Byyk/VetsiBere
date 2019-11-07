@@ -97,9 +97,10 @@
             // consoleControl1
             // 
             this.consoleControl1.BackColor = System.Drawing.Color.Bisque;
-            this.consoleControl1.Location = new System.Drawing.Point(850, 12);
+            this.consoleControl1.Location = new System.Drawing.Point(850, 9);
+            this.consoleControl1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.consoleControl1.Name = "consoleControl1";
-            this.consoleControl1.Size = new System.Drawing.Size(289, 456);
+            this.consoleControl1.Size = new System.Drawing.Size(289, 459);
             this.consoleControl1.TabIndex = 5;
             // 
             // button3

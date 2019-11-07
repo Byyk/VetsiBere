@@ -48,6 +48,10 @@ namespace VetsiBere.Model
         public void ZacniHru()
         {
             Rozdej();
+            foreach (var hrac in Hraci)
+            {
+                hrac.VeHre = true;
+            }
         }
 
         private void Rozdej()
@@ -61,7 +65,6 @@ namespace VetsiBere.Model
                 }
             }
         }
-
 
         private void Refresh()
         {

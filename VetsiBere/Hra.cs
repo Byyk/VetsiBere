@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using VetsiBere.Model;
 using VetsiBere.Model.Components;
@@ -35,6 +36,8 @@ namespace VetsiBere
 
         private void Hra_FormClosing(object sender, FormClosingEventArgs e)
         {
+            timer1.Stop();
+            GameManager.Insatance.ZacniHru();
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 e.Cancel = true;
@@ -56,8 +59,7 @@ namespace VetsiBere
         private void StartRound()
         {
             Play(GameManager.Insatance.Hraci.Where(h => h.VeHre).ToList());
-            if(kolo % 11 == 10)
-                foreach (var hrac in GameManager.Insatance.Hraci) hrac.Ruka.Shufle();
+            if(kolo % 21 == 20) foreach (var hrac in GameManager.Insatance.Hraci) hrac.Ruka.Shufle();
             kolo++;
         }
 
@@ -102,7 +104,19 @@ namespace VetsiBere
             var misto = hraci.Count(h => h.VeHre) - hraci.Count(h => h.PocetKaret == 0) + 1;
             foreach (var hrac in hraci)
                 if (hrac.PocetKaret == 0)
+                {
                     hrac.Prohraj(misto);
+                    hraci.Remove(hrac);
+                }
+
+
+            if (hraci.Count == 1)
+            {
+                timer1.Stop();
+                var res = MessageBox.Show("Hráč " + hraci[0].Nazev + " Vyhrál.\nChcete hrát znovu?", "Konec hry", MessageBoxButtons.YesNo);
+                if(res == DialogResult.Yes)
+                    GameManager.Insatance.ZacniHru();
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)

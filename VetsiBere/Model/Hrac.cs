@@ -87,7 +87,6 @@ namespace VetsiBere.Model
         {
           VeHre = false;
           Poradi = poradi;
-          MessageBox.Show(poradi.ToString());
         }
     }
 }

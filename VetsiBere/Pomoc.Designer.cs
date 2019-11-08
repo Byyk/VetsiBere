@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pomoc));
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(-2, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 228);
+            this.label1.Size = new System.Drawing.Size(331, 262);
             this.label1.TabIndex = 0;
-            this.label1.Text = "V nastavení vytvoř hráče pro dannou hru a poté spusť hru. Ve hře jsou 2 tlačítka." +
-    " \r\nPrvní hru stopne a druhé hru spustí.";
+            this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Pomoc

@@ -120,6 +120,6 @@
   <data name="label1.Text" xml:space="preserve">
     <value>V nastavení vytvoř hráče pro dannou hru a poté spusť hru. Ve hře jsou 2 tlačítka. 
 První hru stopne a druhé hru spustí.
-V právním dolním rohu je konsole, příkazy: kill [název], make-god [název], give-card [typ] [barva]</value>
+V právním dolním rohu je konsole, příkazy: kill [název], make-god [název],  give-card [hrac] [typ], give-card [hrac] [typ] [barva] </value>
   </data>
 </root>
